@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ОКЕАН-кафе — онлайн меню</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Manrope:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="intro" aria-hidden="true">
+  <div class="water">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 Q150 0 300 20 T600 20 T900 20 T1200 20 V40 H0Z" fill="#0e5a73"/></svg>
+    <svg class="b" viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 Q150 40 300 20 T600 20 T900 20 T1200 20 V40 H0Z" fill="#45d6cc"/></svg>
+  </div>
+  <div class="logo">
+    <div class="word"><span style="--i:0">О</span><span style="--i:1">К</span><span style="--i:2">Е</span><span style="--i:3">А</span><span style="--i:4">Н</span></div>
+    <div class="line"></div>
+    <div class="sub">КАФЕ</div>
+  </div>
+</div>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#">ОКЕАН<b>·</b>кафе</a>
+  <nav style="display:flex;gap:10px;align-items:center">
+    <a class="btn ghost sm" href="admin.html">Админ</a>
+    <button class="btn cartbtn" id="openCart">Себет <i id="count">0</i></button>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <p>Тамакты тандаңыз, себетке салыңыз жана буйрутманы WhatsApp аркылуу жөнөтүңүз.</p>
+    <a class="btn" href="#menu">Менюну ачуу</a>
+  </section>
+  <section id="menu">
+    <div class="cats" id="cats"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+</main>
+
+<div class="shade" id="shade"></div>
+<aside class="drawer" id="drawer" aria-label="Себет">
+  <h2>Сиздин буйрутмаңыз</h2>
+  <div class="items" id="items"></div>
+  <div class="foot">
+    <input class="field" id="cname" placeholder="Атыңыз">
+    <input class="field" id="cphone" placeholder="Телефон номериңиз" inputmode="tel">
+    <textarea class="field" id="cnote" placeholder="Дарек же кошумча жазуу"></textarea>
+    <div class="tot"><span>Жалпы</span><span id="total">0</span></div>
+    <button class="btn wa" id="send">WhatsApp аркылуу жөнөтүү</button>
+    <button class="btn ghost" id="closeCart">Менюга кайтуу</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
